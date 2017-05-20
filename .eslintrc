@@ -1,0 +1,59 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "react-native",
+    "airbnb"
+  ],
+  "env": {
+    "jest": true
+  },
+  "plugins": [
+    "flowtype-errors",
+    "react",
+    "react-native",
+    "lodash"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "lodash": {
+      "version": 4
+    }
+  },
+  "rules": {
+    "flowtype-errors/show-errors": 2,
+    "react/prop-types": 0,
+    "react/no-children-prop": 0,
+    "react/jsx-tag-spacing": 0,
+    "react/no-array-index-key": 0,
+    "react/no-unescaped-entities": 0,
+    "react/require-default-props": 0,
+    "strict": 0,
+    "react/jsx-filename-extension": 0,
+    "react-native/no-unused-styles": 2,
+    "react-native/split-platform-components": 2,
+    "react-native/no-inline-styles": 2,
+    "react-native/no-color-literals": 0,
+    "react/prefer-stateless-function": 0,
+    "no-use-before-define": 0,
+    "no-plusplus": 0,
+    "arrow-body-style": 0,
+    "jsx-a11y/anchor-has-content": 0,
+    "no-unused-vars": ["error", { "vars": "all", "args": "none" }],
+    "max-len": ["error", 120],
+    "lodash/chaining": ["error", "always"],
+    "lodash/prefer-constant": 0,
+    "lodash/prefer-lodash-method": ["error", {"ignoreMethods": ["find"]}],
+    "react/no-unused-prop-types": ["error", {"skipShapeProps": true}],
+    "import/export": "error",
+    "import/no-extraneous-dependencies": 0,
+    "import/no-dynamic-require": 0,
+    "global-require": 0,
+  },
+  "globals": {
+    "fetch": true
+  }
+}

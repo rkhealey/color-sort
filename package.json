@@ -7,7 +7,29 @@
   "main": "main.js",
   "dependencies": {
     "expo": "17.0.0",
+    "lodash": "^4.17.4",
     "react": "16.0.0-alpha.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-17.0.0.tar.gz"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "19.0.0",
+    "babel-preset-react-native": "1.9.1",
+    "enzyme": "^2.8.2",
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-config-react-native": "^1.6.0",
+    "eslint-plugin-flowtype-errors": "^3.0.3",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-lodash": "^2.3.5",
+    "eslint-plugin-react": "^6.10.0",
+    "eslint-plugin-react-native": "^2.2.1",
+    "flow-bin": "^0.40.0",
+    "jest": "19.0.2",
+    "lint-staged": "^3.3.1",
+    "pre-commit": "^1.2.2",
+    "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.4"
   }
 }
