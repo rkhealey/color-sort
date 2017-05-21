@@ -1,5 +1,5 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Dimensions, PixelRatio, Platform } from 'react-native';
+import { Dimensions, PixelRatio } from 'react-native';
 
 const height = Dimensions.get('window').height;
 const width = Dimensions.get('window').width;
@@ -19,22 +19,7 @@ const size = {
   statusBar: 53,
 };
 
-const raised = {
-  ...Platform.select({
-    ios: {
-      shadowColor: 'rgba(0, 0, 0, .4)',
-      shadowOffset: { height: 1, width: 1 },
-      shadowOpacity: 1,
-      shadowRadius: 1,
-    },
-    android: {
-      elevation: 2,
-    },
-  }),
-};
-
 export {
   color,
-  raised,
   size,
 };

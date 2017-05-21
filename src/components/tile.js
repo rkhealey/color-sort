@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 
 import { size } from '../utils/constants';
+
 const tileWidth = size.width / 6;
 
 const Tile = ({
