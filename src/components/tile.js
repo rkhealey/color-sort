@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 
 import { size } from '../utils/constants';
+const tileWidth = size.width / 6;
 
 const Tile = ({
   color,
@@ -36,11 +37,19 @@ const styles = StyleSheet.create({
   tile: {
     alignItems: 'center',
     justifyContent: 'center',
-    height: size.width / 6,
-    width: size.width / 6,
+    height: tileWidth,
+    width: tileWidth,
   },
   isActive: {
     zIndex: 1,
+  },
+  inner: {
+    height: tileWidth * 0.75,
+    width: tileWidth * 0.75,
+  },
+  isFixed: {
+    borderWidth: 1,
+    borderColor: 'white',
   },
 });
 
