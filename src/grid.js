@@ -2,16 +2,14 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import {
   Animated,
-  Dimensions,
   PanResponder,
   Text,
-  TouchableOpacity,
-  TouchableWithoutFeedback,
   View,
   StyleSheet,
 } from 'react-native';
 
 import Button from './components/button';
+import Header from './components/header';
 import Tile from './components/tile';
 
 import { color, size } from './utils/constants';
@@ -77,7 +75,7 @@ class Grid extends Component {
       const yChokeAmount = Math.max(
         0, (this.activeTileOffset.y + moveY) - (this.state.gridLayout.height - this.tileWidth));
       const xChokeAmount = Math.max(
-        0,(this.activeTileOffset.x + moveX) - (this.state.gridLayout.width - this.tileWidth));
+        0, (this.activeTileOffset.x + moveX) - (this.state.gridLayout.width - this.tileWidth));
       const yMinChokeAmount = Math.min(0, this.activeTileOffset.y + moveY);
       const xMinChokeAmount = Math.min(0, this.activeTileOffset.x + moveX);
 
@@ -292,7 +290,7 @@ class Grid extends Component {
     const { gridLayout, isPlaying, isLoading, solved } = this.state;
     return (
       <View style={styles.container}>
-        <Text style={styles.heading}>{_.toUpper('Sort the colors')}</Text>
+        <Header />
         <View style={styles.grid} onLayout={this.layoutGrid}>
           {gridLayout && this.renderTiles()}
         </View>
@@ -336,6 +334,10 @@ const styles = StyleSheet.create({
     right: 0,
     top: 0,
   },
+  statusText: {
+    color: 'white',
+    fontSize: 24,
+  },
   solved: {
     alignItems: 'center',
     backgroundColor: 'rgba(0, 0, 0, 0.6)',
@@ -345,12 +347,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 0,
     top: 200,
-  },
-  heading: {
-    color: color.BLACK,
-    fontSize: 18,
-    marginVertical: 25,
-    textAlign: 'center',
   },
 });
 
