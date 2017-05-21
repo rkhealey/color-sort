@@ -313,7 +313,7 @@ class Grid extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.WHITE,
+    backgroundColor: color.WHITE,
     flex: 1,
     paddingTop: size.statusBar,
     position: 'relative',
